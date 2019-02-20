@@ -3,6 +3,7 @@
 from wtforms import Form, StringField, SelectField, validators
 
 class MusicSearchForm(Form):
+    print('HERE')
     choices = [('Artist', 'Artist'),
                ('Album', 'Album'),
                ('Price', 'Price')]

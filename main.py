@@ -24,9 +24,10 @@ def search_results(search):
     results = []
     search_string = search.data['search']
 
-    if search.data['search'] == '':
+    if search.data['search'] != '':
         qry = db_session.query(Album)
         results = qry.all()
+
 
     if not results:
         flash('No results found!')
@@ -66,8 +67,8 @@ def save_changes(album, form, new=False):
     album.artist = artist
     album.title = form.title.data
     album.release_date = form.release_date.data
-    album.Price = form.publisher.data
-    album.Competitors_name = form.media_type.data
+    album.Price = form.Price.data
+    album.Competitors_name = form.Competitors_name.data
 
     if new:
         # Add the new album to the database
@@ -98,4 +99,4 @@ if __name__ == '__main__':
     import os
     if 'WINGDB_ACTIVE' in os.environ:
         app.debug = True
-    app.run(port=5002)
+    app.run(port=5001)

@@ -5,6 +5,6 @@ class Results(Table):
     artist = Col('Artist')
     title = Col('Title')
     release_date = Col('Release Date')
-    publisher = Col('Publisher')
-    media_type = Col('Media')
+    Price = Col('Price')
+    Competitors_name = Col('Competitors_name')
     edit = LinkCol('Edit', 'edit', url_kwargs=dict(id='id'))
