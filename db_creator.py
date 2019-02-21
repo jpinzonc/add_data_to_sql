@@ -20,7 +20,6 @@ class Artist(Base):
 class Album(Base):
     """"""
     __tablename__ = "albums"
-
     id = Column(Integer, primary_key=True)
     title = Column(String)
     release_date = Column(String)

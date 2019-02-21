@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>New Todo Item</h2>
+  <form action="" method=post>
+    <p>
+      Title:
+      <input type=text name=title value="{{ request.form.title }}">
+    <p>Price:
+    <p><input name=Price>{{ request.form.Price }}</>
+    <p>
+      <input type=submit value="Create entry">
+      <a href="{{ url_for('show_all') }}">Back to list</a>
+  </form>
+{% endblock %}
